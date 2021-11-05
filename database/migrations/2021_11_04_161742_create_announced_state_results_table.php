@@ -19,6 +19,7 @@ class CreateAnnouncedStateResultsTable extends Migration
             $table->char('party_abbreviation');
             $table->integer('party_score');
             $table->string('entered_by_user')->nullable();
+            $table->string('date_entered');
             $table->string('user_ip_address');
             $table->timestamps();
         });

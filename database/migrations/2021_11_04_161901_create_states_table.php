@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLgasTable extends Migration
+class CreateStatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateLgasTable extends Migration
      */
     public function up()
     {
-        Schema::create('lgas', function (Blueprint $table) {
+        Schema::create('states', function (Blueprint $table) {
             $table->id();
-            $table->string('lga_name');
-            $table->foreignId('state_id')->constrained();
-            $table->text('lga_description');
-            $table->string('entered_by_user')->nullable();
-            $table->string('entered_by_user');
+            $table->string('state_name');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ class CreateLgasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lgas');
+        Schema::dropIfExists('states');
     }
 }
