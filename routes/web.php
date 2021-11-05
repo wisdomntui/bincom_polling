@@ -23,4 +23,12 @@ Route::get('/individual-polls/{unit?}', [App\Http\Controllers\PollsController::c
 
 Route::get('/total-result/{lga?}', [App\Http\Controllers\PollsController::class, 'totalResult'])->name('total-result');
 
+Route::get('/create-result', [App\Http\Controllers\PollsController::class, 'createResult'])->name('create-result');
+
+Route::post('validate-unit', [App\Http\Controllers\PollsController::class, 'validatePolUnit'])->name('validate-unit');
+
+Route::post('save-result', [App\Http\Controllers\PollsController::class, 'saveResult'])->name('save-result');
+
+Route::get('get-wards', [App\Http\Controllers\PollsController::class, 'getWards'])->name('get-wards');
+
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
