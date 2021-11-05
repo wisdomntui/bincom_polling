@@ -19,11 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 // Auth::routes();
 
-Route::get('/individual-polls/{unit?}', [App\Http\Controllers\PollsController::class, 'individualPolls'])->name('individual-polls');
+Route::get('individual-polls/{unit?}', [App\Http\Controllers\PollsController::class, 'individualPolls'])->name('individual-polls');
 
-Route::get('/total-result/{lga?}', [App\Http\Controllers\PollsController::class, 'totalResult'])->name('total-result');
+Route::get('total-result/{lga?}', [App\Http\Controllers\PollsController::class, 'totalResult'])->name('total-result');
 
-Route::get('/create-result', [App\Http\Controllers\PollsController::class, 'createResult'])->name('create-result');
+Route::get('create-result', [App\Http\Controllers\PollsController::class, 'createResult'])->name('create-result');
 
 Route::post('validate-unit', [App\Http\Controllers\PollsController::class, 'validatePolUnit'])->name('validate-unit');
 
